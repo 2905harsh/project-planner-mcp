@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "projectplannermcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-10",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["MyMCP"]
+    }
+  ],
+
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MCP_OBJECT",
+        "class_name": "MyMCP"
+      }
+    ]
+  },
+
+  "observability": {
+    "enabled": true
+  },
+
+  "kv_namespaces": [
+    {
+      "binding": "PROJECT_PLANNER_STORE",
+      "id": "abf4e12af31e4fe6820dc1d2f7a10b1e"
+    }
+  ]
+}
