@@ -174,3 +174,20 @@ dist
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# --- Cloudflare / Workers ---
+.wrangler
+.wrangler/*
+*.workers.dev
+
+# --- Build output ---
+dist/
+build/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE ---
+.vscode/*
+!.vscode/settings.json
